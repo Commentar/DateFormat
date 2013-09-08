@@ -12,7 +12,7 @@ class DateFormatTest extends \PHPUnit_Framework_TestCase
     public function testConstructCorrectAbstractInstance()
     {
         $view = new DateFormat(
-            new \Commentar\Presentation\ThemeLoader('1970-01-01 00:00:00'),
+            new \Commentar\Presentation\ThemeLoader(),
             $this->getMock('\\Commentar\\ServiceBuilder\\Builder')
         );
 
@@ -25,7 +25,7 @@ class DateFormatTest extends \PHPUnit_Framework_TestCase
     public function testConstructCorrectInstance()
     {
         $view = new DateFormat(
-            new \Commentar\Presentation\ThemeLoader('1970-01-01 00:00:00'),
+            new \Commentar\Presentation\ThemeLoader(),
             $this->getMock('\\Commentar\\ServiceBuilder\\Builder')
         );
 
@@ -39,7 +39,7 @@ class DateFormatTest extends \PHPUnit_Framework_TestCase
     public function testRenderTemplate()
     {
         $view = new DateFormat(
-            new \Commentar\Presentation\ThemeLoader('1970-01-01 00:00:00'),
+            new \Commentar\Presentation\ThemeLoader(),
             $this->getMock('\\Commentar\\ServiceBuilder\\Builder'),
             ['timestamp' => new \DateTime('1970-01-01 00:00:00')]
         );
